@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="" content="">
+  <meta name="theme-color" content="rgba(199,255,0,0.569)"
+  <meta name="Producer" content="Abhay Agrahari" />
+  <meta name="viewport" content="width=device-width, initial-scale=0, maximum-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="GAMEPLAY.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@900&display=swap" rel="stylesheet">
+  <title></title>
+  <style type="text/css" media="all">
+    body {
+      z-index: 1000;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      opacity: .4;
+      
+      animation: bodyani 5.5s linear 0s 1 forwards;
+      background-color: #ffe600;
+    }
+    @keyframes bodyani{
+      from{
+        opacity: .4;
+        
+      }
+      to{
+        opacity: 1;
+      }
+      
+      
+      }
+      .Gaming-Zone {
+      height: 240px;
+      width: 1000px;
+      overflow: hidden;
+      
+    }
+    .panda {
+        z-index: 111;
+      position: absolute;
+      left: 832px;
+      top: 250px;
+      overflow: hidden;
+      background-image: url('Img5.png');
+      transform: rotate(90deg);
+      height: 130px;
+      width: 88.2px;
+      animation: walk .3s steps(5) infinite forwards,
+      forward 5s linear 5s infinite forwards;
+    }
+@keyframes walk {
+      0% {
+        background-position: 0px;
+
+      }
+      100% {
+        background-position: 441px;
+
+      }
+    }
+@keyframes forward {
+      from {
+        transform: translateY(-260px)
+        rotate(90deg);
+      }
+
+      to {
+        transform: translateY(2670px) rotate(90deg);
+      }
+
+    }
+    .road{
+      background-image: url('c.png');
+      position: absolute;
+      transform: rotate(90deg);
+      width: 10500px;
+      left: -4690px;
+      height: 500px;
+      z-index: 1;
+      top: 3000px;
+    }
+    .roadmove{
+      animation: road 4s linear 6s infinite forwards;
+      
+    }
+@keyframes road{
+      from {
+        transform: translateY(00px)rotate(270deg);
+      }
+      to {
+        transform: translateY(-5500px) rotate(270deg);
+      }
+    }
+    h1 {
+      font-size: 200px;
+      top: 975px;
+      transform: rotate(90deg);
+      position: absolute;
+      left: 700px;
+     
+    }
+    .obs{
+      display: inline-block;
+      transform: rotate(90deg);
+      margin-left: 802px;
+      display: none;
+      z-index: -11;
+    }
+    .obstacle1{
+      display: block;
+      position: absolute;
+      top: 3000px;
+      left: -20px;
+      height: 240px;
+      width: 100px;
+      z-index: 2;
+    }
+    .animateobs{
+      animation: obstacle1_run 3.4s linear 10s infinite forwards;
+    }
+    @keyframes obstacle1_run{
+      from{
+        top: 3000px;
+      }
+      to{
+        top: -2000px;
+      }
+    }
+    .animatePanda{
+      animation: ani .5s linear 0s 1 forwards;
+    }
+    @keyframes ani{
+      0%{
+       left: 832px;
+     }
+    50%{
+      left: 1200px;
+    }
+    100%{
+      left: 832px;
+    }
+    
+    }
+    /*for full screen touch */
+    .I{
+      height: 2440px;
+      opacity: 1;
+      width: 3100px;
+      z-index: -1;
+      position: absolute;
+      left: -850px;
+      transform: rotate(90deg);
+      
+    }
+    .obstacle2{
+      display: block;
+      position: absolute;
+      width: 140;
+      left: -20px;
+      height: 100;
+      top:3000px;
+      z-index: 2;
+      transform: scale(2) rotate(90deg);
+      
+    }
+    .animateobs2{
+       animation: obstacle2_run 3.4s linear 19s infinite forwards;
+      
+    }
+      @keyframes obstacle2_run{
+      from{
+        top: 3000px;
+      }
+      to{
+        top: -2000px;
+      }
+    }
+    .obstacle3{
+      z-index: 2;
+      display: block;
+      position: absolute;
+      width: 140;
+      left: 0px;
+      height: 100;
+      top:3600px;
+      transform: scale(1.5) rotate(90deg);
+      
+    }
+    .animateobs3{
+       animation: obstacle3_run 3.4s linear 25s infinite forwards;
+      
+    }
+      @keyframes obstacle3_run{
+      from{
+        top: 3000px;
+      }
+      to{
+        top: -2000px;
+      }
+    }
+    .obstacle4{
+      display: block;
+      position: absolute;
+      width: 140;
+      left: 0px;
+      height: 100;
+      top:3000px;
+      transform: scale(1.5) rotate(90deg);
+      
+    }
+    .animateobs4{
+       animation: obstacle4_run 3.4s linear 0s infinite forwards;
+       display: block;
+      
+    }
+      @keyframes obstacle4_run{
+      from{
+        top: 2600px;
+      }
+      to{
+        top: -2000px;
+      }
+    }
+      .obstacle5{
+        display: block;
+        z-index: 11;
+      position: absolute;
+      left: 992px;
+      top: 3080px;
+      display: block;
+      background-image: url('Obstacle5.png');
+      transform: rotate(90deg);
+      height: 86px;
+      width: 92.5px;
+    }
+     .animateobs5{
+       z-index: 111111;
+       animation:wal .3s steps(2) infinite forwards,
+       obstacle5_run 10.5s linear 38.5s infinite forwards;
+      
+    }
+@keyframes wal {
+      0% {
+        background-position: 0px;
+        
+
+      }
+      100% {
+        background-position: 185px;
+      }
+    }
+      @keyframes obstacle5_run{
+      0%{
+        top: 3000px;
+       
+      }
+      25%{
+        top: -2000px;
+        
+      }
+      100%{
+        top: -2001px;
+      }
+    }
+    #board{
+      position: absolute;
+      left: 1000px;
+      top: 1800px;
+      font-size: 120px;
+      color: rgb(87,55,44);
+      
+      
+    }
+    span{
+      position: fixed;
+      font-size: 110px;
+      z-index: 1111;
+      top: 15px;
+      transform: rotate(0deg);
+      left: 450px;
+    }
+    #over{
+      display: none;
+      position: absolute;
+      top: 950px;
+      left: 400px;
+      text-decoration: none;
+      
+    }
+    audio{
+      display: none;
+    }
+    #high{
+      font-size: 110px;
+      color: rgb(87,55,44);
+      position: absolute;
+      left: 1000px;
+      top: 1676px;
+      display: none;
+    }
+    #high_score{
+      position: absolute;
+      top: 10px;
+      left: 715px;
+    }
+    .countdown{
+      font-size: 700px;
+      color: rgb(121,49,49);
+      position: absolute;
+      top: 800px;
+      left: 700px;
+      opacity: 1;
+      z-index: 2;
+      transform: rotate(90deg);
+      animation: countAni 0s linear 6s 1 forwards;
+    }
+    @keyframes countAni{
+    to{
+    opacity: 0;
+    }
+    
+    }
+    .cloud{
+      position: absolute;
+      top: 500px;
+      left: 900px;
+      height: 500px;
+      width: 500px;
+      object-fit: contain;
+      transform: rotate(90deg);
+    }
+    .cloud2{
+      position: absolute;
+      top: 1500px;
+      left: 900px;
+      height: 500px;
+      width: 500px;
+      object-fit: contain;
+      transform: rotate(90deg);
+    }
+    #retry{
+      position: absolute;
+      height: 1000px;
+      width: 500px;
+      top: 1100px;
+      transform: rotate(90deg) scale(2);
+      left: -400px;
+      z-index: 1211;
+      display: none;
+    }
+    </style>
+</head>
+<body ontouchstart="touche()" onclick = "touche()">
+  <div class="Gamimng-Zone">
+    <div class="countdown">5</div>
+    <h1 id="h1"onclick=""><U> DRAGON&nbsp;GAME</U></h1>
+  
+    <div class="panda" id="panda">
+    </div>
+      <img class="I" src="Background2.png" alt="" />
+   
+    <img class="road" src="Trck.png" alt="" />
+    </div>
+    <div id="retry">
+      <img src="retry.png" alt="" onclick="rel()"/>
+    </div>
+    <img class="cloud" src="Cloud.png" alt="" />
+    <img class="cloud2" src="Cloud.png" alt="" />
+    
+    <div id="obstacles">
+      <img class="obstacle1 obs" onclick="touch()" src="Obstacle1.png" alt="" />
+      <img class="obstacle2 obs" src="Obstacle2.png" alt="" />
+      <img class="obstacle3 obs" src="Obstacle3.png" alt="" />
+      <img class="obstacle4 obs" src="Obstacle4.png" alt="" />
+      
+      <div class="obstacle5"></div>
+        <audio id="audios" controls>
+          <source src="play.mp3" type="audio/mpeg">
+      
+        <audio id="audio2" controls>
+          <source src="move.mp3" type="audio/mpeg">
+      
+        <audio id="audio3" controls>
+          <source src="gameOver.mp3" type="audio/mpeg">
+        <audio id="audio4" controls>
+          <source src="Score.mp3" type="audio/mpeg">
+      
+      
+    </div>
+    <div class="score">
+     <h1 id="board">Score-: <span id="score">0</span></h1>
+     <h1 id="high">High&nbsp;Score-: <span id="high_score"></span></h1>
+    </div>
+    <div class="gameOver">
+      <h1 id="over">Game&nbsp;Over</h1>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" charset="utf-8">
+  
+document.querySelector(".obstacle1").classList.add("animateobs")
+document.querySelector(".obstacle2").classList.add("animateobs2")
+document.querySelector(".obstacle3").classList.add("animateobs3")
+document.querySelector(".road").classList.add("roadmove")
+document.querySelector(".obstacle5").classList.add("animateobs5")
+
+let score = 0 
+ setTimeout(()=>{
+   
+  setInterval(()=>{
+    if(document.getElementById("h1").style.opacity != "9.5" && score<=500){
+    score += 1
+    // console.log(score)
+    
+    document.getElementById("score").innerHTML = score
+    
+    }
+  
+  },100)
+ },6000)
+ setInterval(()=>{
+   if(document.getElementById("h1").style.opacity != "9.5" && score >=500){
+    score += 1
+    // console.log(score)
+    
+    document.getElementById("score").innerHTML = score
+    
+    }
+  },70)
+  high_score = 0
+  setInterval(()=>{
+    if(score > high_score){
+      document.getElementById("high_score").innerHTML = score
+ 
+    }
+  })
+  
+  
+ setInterval(() =>{
+    dino = document.querySelector('.panda');
+    obstacle = document.querySelector('.obstacle1');
+    dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'));
+
+    ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
+    oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('top'));
+
+    offsetX = Math.abs(dx - ox);
+    offsetY = Math.abs(dy - oy);
+    // console.log(offsetX, offsetY)
+    if ((offsetY <=35 && offsetY<144) && offsetX<=970) {
+    document.querySelector(".obstacle1").classList.remove("animateobs")
+  document.querySelector(".obstacle2").classList.remove("animateobs2")
+        document.querySelector(".obstacle3").classList.remove("animateobs3")
+  document.getElementById("over").style.display = "block"
+  document.getElementById("retry").style.display = "block"
+  document.getElementById("h1").style.opacity = "9.5"
+  document.querySelector(".road").classList.remove("roadmove")
+  document.getElementById("audios").pause()
+  document.querySelector(".obstacle5").style.display = "none"
+        document.getElementById("audio3").play()
+        // console.log("play")
+          document.querySelector(".panda").classList.remove("animatePanda")
+    
+    }
+  },)
+ setInterval(() =>{
+    dino = document.querySelector('.panda');
+    obstacle = document.querySelector('.obstacle2');
+    dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'));
+
+    ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
+    oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('top'));
+
+    offsetX = Math.abs(dx - ox);
+    offsetY = Math.abs(dy - oy);
+    // console.log(offsetX, offsetY)
+    if ((offsetY <=35 && offsetY<=70) && offsetX<=970) {
+      document.querySelector(".obstacle2").style.display = "none"
+      document.querySelector(".obstacle1").style.display = "none"
+      document.querySelector(".obstacle3").style.display = "none"
+        document.getElementById("h1").style.opacity = "9.5"
+         document.querySelector(".obstacle5").style.display = "none"
+      
+      
+      document.getElementById("over").style.display = "block"
+      document.getElementById("retry").style.display = "block"
+    document.getElementById("audios").pause()
+        document.getElementById("audio3").play()
+       document.querySelector(".road").classList.remove("roadmove")
+        document.querySelector(".panda").classList.remove("animatePanda")
+        
+        
+    }
+  },)
+  key = 1
+  function touche(){
+      panda = document.querySelector(".panda")
+      document.getElementById("audio2").play()
+      document.getElementById("audio2").playbackRate= 2.5;
+      // console.log("executed")
+      panda.classList.add("animatePanda")
+      setTimeout(()=>{
+      panda.classList.remove("animatePanda")
+        
+      },500);
+      
+    
+  
+    
+  }
+ setInterval(() =>{
+    dino = document.querySelector('.panda');
+    obstacle = document.querySelector('.obstacle3');
+    dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'));
+
+    ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
+    oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('top'));
+
+    offsetX = Math.abs(dx - ox);
+    offsetY = Math.abs(dy - oy);
+   
+    // console.log(offsetX, offsetY)
+    if ((offsetY <109) && offsetX<=970) {
+       document.querySelector(".obstacle1").classList.remove("animateobs")
+  document.querySelector(".obstacle2").classList.remove("animateobs2")
+        document.querySelector(".obstacle3").classList.remove("animateobs3")
+        document.getElementById("over").style.display = "block"
+        document.getElementById("retry").style.display = "block"
+         document.querySelector(".obstacle5").style.display = "none"
+  document.getElementById("audios").pause()
+     
+    document.getElementById("h1").style.opacity = "9.5"
+ document.querySelector(".road").classList.remove("roadmove")
+        document.getElementById("audio3").play()
+        document.querySelector(".panda").classList.remove("animatePanda")
+       }
+  },)
+ setInterval(() =>{
+    dino = document.querySelector('.panda');
+    obstacle = document.querySelector('.obstacle4');
+    dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'));
+
+    ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
+    oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('top'));
+
+    offsetX = Math.abs(dx - ox);
+    offsetY = Math.abs(dy - oy);
+    // console.log(offsetX, offsetY)
+    if ((offsetY <150 && offsetY>145) && offsetX<=970) {
+      }
+  },)
+ setInterval(() =>{
+    dino = document.querySelector('.panda');
+    obstacle = document.querySelector('.obstacle5');
+    dx = parseInt(window.getComputedStyle(dino, null).getPropertyValue('left'));
+    dy = parseInt(window.getComputedStyle(dino, null).getPropertyValue('top'));
+
+    ox = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('left'));
+    oy = parseInt(window.getComputedStyle(obstacle, null).getPropertyValue('top'));
+
+    offsetX = Math.abs(dx - ox);
+    offsetY = Math.abs(dy - oy);
+   // console.log(offsetX, offsetY)
+    if (offsetY <= 80 && offsetY >= (-20) &&  offsetX <= 50 && offsetX >= (-70)) {
+      document.querySelector(".obstacle5").style.display = "none"
+        document.querySelector(".obstacle1").classList.remove("animateobs")
+  document.querySelector(".obstacle2").classList.remove("animateobs2")
+        document.querySelector(".obstacle3").classList.remove("animateobs3")
+        document.getElementById("over").style.display = "block"
+        document.getElementById("retry").style.display = "block"
+  document.getElementById("audios").pause()
+     
+    document.getElementById("h1").style.opacity = "9.5"
+ document.querySelector(".road").classList.remove("roadmove")
+        document.getElementById("audio3").play()
+          document.querySelector(".panda").classList.remove("animatePanda")
+        
+        
+  
+    }
+  },)
+
+ let i = 0
+  setInterval(()=>{
+    if(score-i == 100){
+  document.getElementById("audio4").play()   
+  i = score
+   
+    }
+  },)
+ 
+  
+  window.onload=function reloads(){
+    setTimeout(()=>{
+      
+    document.getElementById("audios").play()
+    document.getElementById("audios").volume = .4
+    },5000)
+  }
+  let countdown = 5
+  setInterval(()=>{
+   if(countdown >0 ){
+   countdown -= 1
+   document.querySelector(".countdown").innerHTML = countdown
+    document.getElementById("audio2").play()
+    
+  }
+  else{
+    document.getElementById("audio2").pause();
+  }
+  },1000)
+  function rel(){
+      if(document.getElementById("retry").style.display == "block"){
+         
+  window.location = "index2.html"
+      }
+      setTimeout(rel,500)
+  }
+</script>
+</html>
