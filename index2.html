@@ -589,7 +589,9 @@ let score = 0
  let i = 0
   setInterval(()=>{
     if(score-i == 100){
-  document.getElementById("audio4").play()   
+  document.getElementById("audio4").play();
+      document.getElementById("audio4").volume = 0.4;
+      
   i = score
    
     }
